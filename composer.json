@@ -1,0 +1,37 @@
+{
+    "name": "nails/module-csp",
+    "description": "Build and send a Content-Security-Policy header from Nails applications",
+    "homepage": "https://docs.nailsapp.co.uk/modules/other/csp",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.3",
+        "nails/common": "dev-develop"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.0",
+        "phpstan/phpstan": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nails\\Csp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Csp\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit",
+        "analyse": "./vendor/bin/phpstan analyse -c .phpstan/config.neon"
+    },
+    "extra": {
+        "nails": {
+            "moduleName": "csp",
+            "type": "module",
+            "namespace": "Nails\\Csp\\"
+        }
+    }
+}

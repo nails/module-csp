@@ -1,0 +1,10 @@
+parameters:
+    level: 8
+    paths:
+        - ../src
+        - ../tests
+    bootstrapFiles:
+        - constants.php
+    ignoreErrors:
+        -
+            identifier: missingType.iterableValue
